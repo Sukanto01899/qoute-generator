@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes Generators</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            padding: 0;
+            margin: 0;
+            box-sizing: 0;
+        }
+        .container{
+            width: 40%;
+            margin: 10% auto;
+            text-align: center;
+        }
+        .container h1{
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .share{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1em;
+            padding-bottom: 10px;
+            padding-top: 40px;
+        }
+        .quote{
+            background-color: rgb(235, 233, 233);
+            padding: 1.8rem;
+            border-radius: 10px;
+        }
+        .quote h3{
+            font-size: 24px;
+            font-weight: 400;
+        }
+        button{
+            width: 100%;
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            background-color: rgb(5, 147, 255);
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #twitter-btn{
+            cursor: pointer;
+            color: rgb(11, 170, 250);
+        }
+
+        @media (max-width: 740px) {
+            .container{
+                width: 95%;
+            }
+        }
+        @media screen and (max-width: 900px) and (min-width: 741px) {
+            .container{
+                width: 90%;
+            }
+        }
+        @media screen and (max-width: 1200px) and (min-width: 9001px) {
+            .container{
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body onload="getQuote()">
+    <div class="container">
+        <h1>Generate Quotes</h1>
+        <p>A free REST API for random Kanye West quotes</p>
+        <div class="share">
+            <p>By-Sukanto</p>
+            <a onclick="tweet()" id="twitter-btn">Tweet</a>
+        </div>
+        <div class="quote">
+            <h3>"<span id="quote-text">Generating...</span>"</h3>
+        </div>
+        <button onclick="getQuote()">GENERATE</button>
+        
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
